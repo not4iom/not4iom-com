@@ -612,6 +612,12 @@ h1, h2, h3 { line-height: 1.05; letter-spacing: .005em; }
   color: var(--red-700);
 }
 
+/* Featured (full-width) pillar — the decommissioning box */
+.pillar--feature { grid-column: 1 / -1; }
+.pillar--feature::before { transform: scaleY(1); }
+.pillar--feature .pillar-body { columns: 2 20rem; column-gap: 2.2rem; margin-bottom: .2rem; }
+.pillar--feature .pillar-body p { margin: 0 0 .85rem; break-inside: avoid; -webkit-column-break-inside: avoid; }
+
 /* ============================================================
    Take action
    ============================================================ */
