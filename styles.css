@@ -924,13 +924,16 @@ figcaption { font-size: .92rem; color: var(--muted); margin-top: .65rem; line-he
 .voices-head .eyebrow { justify-content: center; }
 .voices-head .section-lead { margin-inline: auto; color: var(--muted); }
 .voice-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.2rem;
+  columns: 3 280px;
+  column-gap: 1.2rem;
   margin-top: clamp(1.6rem, 4vw, 2.4rem);
 }
 .voice {
-  margin: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 1.2rem;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
