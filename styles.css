@@ -982,7 +982,7 @@ figcaption { font-size: .92rem; color: var(--muted); margin-top: .65rem; line-he
 }
 .lightbox.open { display: flex; }
 /* hide the backdrop-filter header while the modal is open (it otherwise composites over the overlay) */
-body.lightbox-open .site-header { visibility: hidden; }
+body.lightbox-open .site-header, body.modal-open .site-header { visibility: hidden; }
 .lb-figure {
   margin: 0; max-width: min(1100px, 92vw);
   display: flex; flex-direction: column; align-items: center;
@@ -1033,6 +1033,75 @@ body.lightbox-open .site-header { visibility: hidden; }
 .watch-link { margin-top: 1rem; }
 .watch-link a { color: #ff8074; font-weight: 700; font-size: .95rem; text-decoration: none; }
 .watch-link a:hover { color: #fff; }
+
+/* ============================================================
+   Event bar + modal (Tynwald Day)
+   ============================================================ */
+.eventbar {
+  display: flex; align-items: center; gap: .4rem;
+  background: var(--ink); color: #fff;
+  padding: .45rem clamp(.7rem, 3vw, 1.4rem);
+}
+.eventbar-main {
+  flex: 1 1 auto; min-width: 0;
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+  background: none; border: 0; color: inherit; cursor: pointer;
+  font: 600 .92rem/1.35 var(--font-body); text-align: left; text-decoration: none;
+}
+.eventbar-tag {
+  flex: none;
+  background: var(--red); color: #fff;
+  font-weight: 700; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase;
+  padding: .35em .7em; border-radius: 999px;
+}
+.eventbar-msg { color: #dfe6ec; }
+.eventbar-msg b { color: #fff; text-decoration: underline; text-underline-offset: .15em; }
+.eventbar-close {
+  flex: none; background: none; border: 0; color: #9aa4ae;
+  font-size: 1.45rem; line-height: 1; cursor: pointer; padding: 0 .3rem;
+}
+.eventbar-close:hover { color: #fff; }
+@media (max-width: 560px) {
+  .eventbar-main { font-size: .82rem; gap: .45rem; }
+  .eventbar-tag { font-size: .64rem; padding: .3em .55em; }
+}
+
+.event-modal {
+  position: fixed; inset: 0; z-index: 1100;
+  display: none; align-items: center; justify-content: center;
+  background: rgba(8,11,15,.78);
+  padding: clamp(1rem, 4vw, 2rem);
+}
+.event-modal.open { display: flex; }
+.event-card {
+  position: relative;
+  width: 100%; max-width: 560px;
+  max-height: 90vh; overflow-y: auto;
+  background: var(--paper); color: var(--text);
+  border-radius: var(--radius);
+  border-top: 5px solid var(--red);
+  padding: clamp(1.6rem, 4vw, 2.6rem);
+  box-shadow: var(--shadow-lg);
+}
+.event-card h2 {
+  font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+  font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1; color: var(--ink);
+  margin: .35rem 0 1rem;
+}
+.event-card > p { color: var(--muted); margin-bottom: 1.1rem; }
+.event-card > p strong { color: var(--ink); }
+.event-meta { list-style: none; padding: 0; margin: 0 0 1.1rem; display: grid; gap: .65rem; }
+.event-meta li { display: flex; gap: .65rem; align-items: flex-start; font-size: 1rem; color: var(--text); }
+.event-meta svg { flex: none; width: 20px; height: 20px; color: var(--red); margin-top: 2px; }
+.event-meta strong { color: var(--ink); }
+.event-actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.3rem; }
+.event-close {
+  position: absolute; top: .7rem; right: .7rem;
+  width: 40px; height: 40px; display: grid; place-items: center;
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: 50%;
+  font-size: 1.5rem; line-height: 1; color: var(--muted); cursor: pointer;
+}
+.event-close:hover { background: var(--line); color: var(--ink); }
 
 /* ============================================================
    Responsive

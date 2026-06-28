@@ -36,6 +36,15 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- ===================== Event bar (Tynwald Day — auto-hides after 6 Jul 2026) ===================== -->
+<aside class="eventbar" id="eventbar" aria-label="Upcoming event">
+  <a class="eventbar-main" href="https://www.facebook.com/p/No-Offshore-Turbines-4-Isle-of-Man-61588338835208/" target="_blank" rel="noopener" aria-haspopup="dialog" aria-controls="event-modal">
+    <span class="eventbar-tag">Tynwald Day</span>
+    <span class="eventbar-msg">Mon 6 July · join our peaceful gathering at Tynwald Hill — <b>see details</b></span>
+  </a>
+  <button class="eventbar-close" type="button" aria-label="Dismiss this notice">×</button>
+</aside>
+
 <!-- ============================================================
      Cognito Forms links (each button goes straight to its form)
      ------------------------------------------------------------
@@ -590,6 +599,26 @@
   </div>
 </footer>
 
+<!-- ===================== Event modal (Tynwald Day) ===================== -->
+<div class="event-modal" id="event-modal" role="dialog" aria-modal="true" aria-labelledby="event-modal-title" hidden>
+  <div class="event-card">
+    <button class="event-close" type="button" aria-label="Close">×</button>
+    <span class="eyebrow">Join us · our National Day</span>
+    <h2 id="event-modal-title">Tynwald Day 2026</h2>
+    <p>Come and join NOT4IOM's <strong>peaceful gathering</strong> and let's enjoy our National Day together — our chance to stand as one and show just how many of us say <strong>NO to Mooir Vannin</strong>.</p>
+    <ul class="event-meta">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg> <span><strong>Monday 6 July 2026</strong></span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg> <span>Tynwald Hill, St John's</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> <span>Petitions of Redress are usually presented <strong>12:00&ndash;1:00pm</strong></span></li>
+    </ul>
+    <p>We're ready — are you? Got your T-shirt yet? 🇮🇲</p>
+    <div class="event-actions">
+      <a class="btn" href="https://www.cognitoforms.com/NOT4IOM1/NOT4IOM" target="_blank" rel="noopener">Sign the petition</a>
+      <a class="btn btn--ghost" href="https://www.facebook.com/p/No-Offshore-Turbines-4-Isle-of-Man-61588338835208/" target="_blank" rel="noopener">Latest on Facebook</a>
+    </div>
+  </div>
+</div>
+
 <!-- ===================== Progressive enhancement ===================== -->
 <script>
 (function () {
@@ -745,6 +774,49 @@
         controls[n].focus();
       }
     });
+  }
+
+  /* Tynwald Day event bar + modal (auto-hides after the event) */
+  var ebar = document.getElementById("eventbar");
+  var emodal = document.getElementById("event-modal");
+  if (ebar && emodal) {
+    var EKEY = "n4i-tynwald-2026";
+    var ecutoff = new Date(2026, 6, 7).getTime(); // hide from 7 July 2026
+    var edismissed = false;
+    try { edismissed = localStorage.getItem(EKEY) === "dismissed"; } catch (e) {}
+    if (Date.now() >= ecutoff || edismissed) {
+      if (ebar.parentNode) ebar.parentNode.removeChild(ebar);
+    } else {
+      var emFocus = null;
+      var openEvent = function () {
+        emFocus = document.activeElement;
+        emodal.hidden = false;
+        emodal.classList.add("open");
+        document.body.classList.add("modal-open");
+        document.body.style.overflow = "hidden";
+        var c = emodal.querySelector(".event-close"); if (c) c.focus();
+      };
+      var closeEvent = function () {
+        emodal.classList.remove("open");
+        emodal.hidden = true;
+        document.body.classList.remove("modal-open");
+        document.body.style.overflow = "";
+        if (emFocus && emFocus.focus) emFocus.focus();
+      };
+      var emain = ebar.querySelector(".eventbar-main");
+      if (emain) emain.addEventListener("click", function (e) { e.preventDefault(); openEvent(); });
+      var ebClose = ebar.querySelector(".eventbar-close");
+      if (ebClose) ebClose.addEventListener("click", function () {
+        try { localStorage.setItem(EKEY, "dismissed"); } catch (e) {}
+        if (ebar.parentNode) ebar.parentNode.removeChild(ebar);
+      });
+      emodal.addEventListener("click", function (e) { if (e.target === emodal) closeEvent(); });
+      var emX = emodal.querySelector(".event-close");
+      if (emX) emX.addEventListener("click", closeEvent);
+      document.addEventListener("keydown", function (e) {
+        if (emodal.classList.contains("open") && e.key === "Escape") closeEvent();
+      });
+    }
   }
 })();
 </script>
