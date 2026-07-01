@@ -1,0 +1,95 @@
+<svg width="100%" viewBox="0 0 1150 660" xmlns="http://www.w3.org/2000/svg" role="img" font-family="Arial, Helvetica, sans-serif">
+  <title>How tall is 350 metres? Turbine height comparison</title>
+  <desc>The proposed Mooir Vannin wind turbines would stand up to 350 metres — taller than the Eiffel Tower (330m) and The Shard (306m), about 2.6 times the London Eye (135m), 4.5 times the Carnane TV mast (78m) and 16 times the Laxey Wheel (22m).</desc>
+
+  <rect x="0" y="0" width="1150" height="660" fill="#f6f1e9"/>
+
+  <g stroke="#ddd4c4" stroke-width="1" stroke-dasharray="4 5">
+    <line x1="90" y1="157" x2="1095" y2="157"/>
+    <line x1="90" y1="291" x2="1095" y2="291"/>
+    <line x1="90" y1="426" x2="1095" y2="426"/>
+  </g>
+  <g fill="#a99e8c" font-size="13">
+    <text x="45" y="161">300 m</text>
+    <text x="45" y="295">200 m</text>
+    <text x="45" y="430">100 m</text>
+    <text x="45" y="556">0 m</text>
+  </g>
+
+  <line x1="90" y1="560" x2="1095" y2="560" stroke="#8a949d" stroke-width="1.5"/>
+
+  <polygon points="233,560 247,560 244,298 236,298" fill="#e02718"/>
+  <g stroke="#e02718" stroke-width="7" stroke-linecap="round">
+    <line x1="240" y1="291" x2="240" y2="90"/>
+    <line x1="240" y1="291" x2="414" y2="392"/>
+    <line x1="240" y1="291" x2="66" y2="392"/>
+  </g>
+  <rect x="231" y="285" width="18" height="12" rx="3" fill="#e02718"/>
+  <circle cx="240" cy="291" r="6" fill="#b81f12"/>
+  <text x="295" y="122" fill="#e02718" font-size="18" font-weight="700">350 m</text>
+  <text x="295" y="139" fill="#8a7f6e" font-size="11">to blade tip</text>
+
+  <path d="M466,560 Q474,480 480,406 Q484,300 486,157 L486,124 L490,117 L494,124 L494,157 Q496,300 500,406 Q506,480 514,560 Z" fill="#8a7a5f" stroke="#6e6248" stroke-width="0.6"/>
+  <rect x="475" y="479" width="30" height="5" fill="#8a7a5f"/>
+  <rect x="479" y="402" width="22" height="4" fill="#8a7a5f"/>
+  <path d="M475,560 Q490,516 505,560 Z" fill="#f6f1e9"/>
+  <text x="490" y="104" fill="#6e6248" font-size="17" font-weight="700" text-anchor="middle">330 m</text>
+
+  <polygon points="593,560 647,560 624,149 616,149" fill="#93a3b3" stroke="#6b7884" stroke-width="0.6"/>
+  <g stroke="#7e8e9c" stroke-width="0.6">
+    <line x1="608" y1="558" x2="619" y2="158"/>
+    <line x1="632" y1="558" x2="621" y2="158"/>
+  </g>
+  <text x="620" y="140" fill="#47535f" font-size="17" font-weight="700" text-anchor="middle">306 m</text>
+
+  <g stroke="#6b7884" stroke-width="3"><line x1="780" y1="459" x2="755" y2="560"/><line x1="780" y1="459" x2="805" y2="560"/></g>
+  <circle cx="780" cy="459" r="80" fill="none" stroke="#6b7884" stroke-width="2.5"/>
+  <g stroke="#8a97a4" stroke-width="0.8">
+    <line x1="780" y1="459" x2="860" y2="459"/>
+    <line x1="780" y1="459" x2="837" y2="516"/>
+    <line x1="780" y1="459" x2="780" y2="539"/>
+    <line x1="780" y1="459" x2="723" y2="516"/>
+    <line x1="780" y1="459" x2="700" y2="459"/>
+    <line x1="780" y1="459" x2="723" y2="402"/>
+    <line x1="780" y1="459" x2="780" y2="379"/>
+    <line x1="780" y1="459" x2="837" y2="402"/>
+  </g>
+  <circle cx="780" cy="459" r="5" fill="#6b7884"/>
+  <text x="780" y="368" fill="#47535f" font-size="17" font-weight="700" text-anchor="middle">135 m</text>
+
+  <polygon points="911,560 929,560 923,455 917,455" fill="#edeae1" stroke="#5b6670" stroke-width="0.8"/>
+  <g stroke="#8a949d" stroke-width="0.7"><line x1="920" y1="463" x2="898" y2="560"/><line x1="920" y1="463" x2="942" y2="560"/></g>
+  <g stroke="#5b6670" stroke-width="0.6"><line x1="915" y1="500" x2="925" y2="500"/><line x1="914" y1="530" x2="926" y2="530"/></g>
+  <circle cx="920" cy="453" r="2.5" fill="#e02718"/>
+  <text x="920" y="446" fill="#47535f" font-size="15" font-weight="700" text-anchor="middle">78 m</text>
+
+  <rect x="1047" y="534" width="6" height="26" fill="#b3aa97"/>
+  <circle cx="1050" cy="546" r="14" fill="#f5ddd8" stroke="#b0271b" stroke-width="2.5"/>
+  <g stroke="#b0271b" stroke-width="0.8">
+    <line x1="1050" y1="546" x2="1064" y2="546"/>
+    <line x1="1050" y1="546" x2="1057" y2="558"/>
+    <line x1="1050" y1="546" x2="1043" y2="558"/>
+    <line x1="1050" y1="546" x2="1036" y2="546"/>
+    <line x1="1050" y1="546" x2="1043" y2="534"/>
+    <line x1="1050" y1="546" x2="1057" y2="534"/>
+  </g>
+  <circle cx="1050" cy="546" r="3" fill="#b0271b"/>
+  <text x="1050" y="524" fill="#b0271b" font-size="14" font-weight="700" text-anchor="middle">22 m</text>
+
+  <text x="45" y="46" font-size="30" font-weight="700" fill="#15202b">How tall is <tspan fill="#e02718">350 m</tspan>?</text>
+  <text x="45" y="70" font-size="15" fill="#5b6670">The proposed Mooir Vannin turbines vs. things we know</text>
+  <text x="1100" y="46" font-size="20" font-weight="800" fill="#e02718" text-anchor="end">NOT4IOM</text>
+
+  <g text-anchor="middle" font-size="14" font-weight="600" fill="#15202b">
+    <text x="240" y="584">Proposed turbine</text>
+    <text x="490" y="584">Eiffel Tower</text>
+    <text x="620" y="584">The Shard</text>
+    <text x="780" y="584">London Eye</text>
+    <text x="920" y="584">Carnane mast</text>
+    <text x="1050" y="584">Laxey Wheel</text>
+  </g>
+
+  <line x1="90" y1="608" x2="1095" y2="608" stroke="#e0d7c7" stroke-width="1"/>
+  <text x="570" y="631" font-size="14" fill="#15202b" text-anchor="middle">Taller than the Eiffel Tower and The Shard — and roughly <tspan font-weight="700" fill="#e02718">4.5&#215;</tspan> the Carnane mast and <tspan font-weight="700" fill="#e02718">16&#215;</tspan> the Laxey Wheel.</text>
+  <text x="1100" y="650" font-size="12" fill="#8a949d" text-anchor="end">not4iom.com</text>
+</svg>
