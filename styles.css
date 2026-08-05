@@ -689,8 +689,10 @@ h1, h2, h3 { line-height: 1.05; letter-spacing: .005em; }
 .logistics { background: var(--paper-2); }
 .log-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+  max-width: 640px;
+  margin-inline: auto;
 }
 .panel {
   background: #fff;
