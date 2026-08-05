@@ -45,6 +45,15 @@
   <button class="eventbar-close" type="button" aria-label="Dismiss this notice">×</button>
 </aside>
 
+<!-- Election statement notice — slim bar linking to the standalone page (auto-hides after 1 Oct 2026) -->
+<aside class="eventbar" id="electionbar" aria-label="Election statement">
+  <a class="eventbar-main" href="election-statement.html">
+    <span class="eventbar-tag">General Election</span>
+    <span class="eventbar-msg">How we're campaigning during the election — <b>read our statement</b></span>
+  </a>
+  <button class="eventbar-close" type="button" aria-label="Dismiss this notice">×</button>
+</aside>
+
 <!-- ============================================================
      Cognito Forms links (each button goes straight to its form)
      ------------------------------------------------------------
@@ -936,6 +945,24 @@
       if (emX) emX.addEventListener("click", closeEvent);
       document.addEventListener("keydown", function (e) {
         if (emodal.classList.contains("open") && e.key === "Escape") closeEvent();
+      });
+    }
+  }
+
+  /* Election statement notice bar — links to the page, dismissible, auto-hides after the election */
+  var elbar = document.getElementById("electionbar");
+  if (elbar) {
+    var ELKEY = "n4i-election-2026";
+    var elcutoff = new Date(2026, 9, 1).getTime(); // hide from 1 October 2026
+    var eldismissed = false;
+    try { eldismissed = localStorage.getItem(ELKEY) === "dismissed"; } catch (e) {}
+    if (Date.now() >= elcutoff || eldismissed) {
+      if (elbar.parentNode) elbar.parentNode.removeChild(elbar);
+    } else {
+      var elClose = elbar.querySelector(".eventbar-close");
+      if (elClose) elClose.addEventListener("click", function () {
+        try { localStorage.setItem(ELKEY, "dismissed"); } catch (e) {}
+        if (elbar.parentNode) elbar.parentNode.removeChild(elbar);
       });
     }
   }
