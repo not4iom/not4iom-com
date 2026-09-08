@@ -1203,6 +1203,18 @@ body.lightbox-open .site-header, body.modal-open .site-header { visibility: hidd
   width: .5rem; height: .5rem; background: var(--red); border-radius: 50%;
 }
 .doc-cta { margin-top: clamp(1.6rem, 4vw, 2.2rem); }
+.doc-body h2 {
+  font-family: var(--font-body); font-size: 1.25rem; font-weight: 700;
+  color: var(--ink); line-height: 1.25; margin: 1.9rem 0 .55rem;
+}
+.doc-body h2:first-child { margin-top: 0; }
+.doc-download {
+  margin: 1.5rem 0; padding: 1.2rem 1.3rem;
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
+  display: flex; flex-wrap: wrap; align-items: center; gap: .9rem 1.1rem;
+}
+.doc-download p { margin: 0; color: var(--text); font-size: .98rem; flex: 1 1 220px; }
+.doc-download .meta { color: var(--muted); font-size: .85rem; }
 
 /* News & press index */
 .news-list { list-style: none; padding: 0; margin: clamp(1.2rem, 3vw, 1.8rem) 0 0; }
