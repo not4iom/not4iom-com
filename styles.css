@@ -1232,6 +1232,55 @@ body.lightbox-open .site-header, body.modal-open .site-header { visibility: hidd
 .news-more:hover { text-decoration: underline; }
 
 /* ============================================================
+   Claims / risks band (island-wide mailout hero)
+   ============================================================ */
+.claims { background: var(--ink); color: #fff; padding-block: clamp(2.4rem, 6vw, 4rem); }
+.claims-head { text-align: center; max-width: 26ch; margin-inline: auto; }
+.claims-head h2 {
+  font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+  font-size: clamp(1.9rem, 5.2vw, 3.2rem); line-height: 1.02; letter-spacing: .01em;
+  color: #fff;
+}
+.claims-red { color: var(--red); display: block; }
+.claims-intro { color: #c5cdd6; font-size: 1rem; margin-top: .9rem; }
+.claims-list {
+  list-style: none; padding: 0;
+  margin: clamp(1.6rem, 4vw, 2.4rem) auto 0; max-width: 640px;
+  display: grid; gap: .55rem;
+}
+.claim {
+  display: flex; align-items: stretch;
+  background: #fff; border-radius: 8px; overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+.claim-arrow {
+  flex: none; display: flex; align-items: center;
+  padding: 0 .35rem 0 .8rem; color: var(--red);
+  font-size: 1.55rem; font-weight: 900; line-height: 1;
+}
+.claim-name {
+  flex: 1 1 auto; min-width: 0; display: flex; align-items: center;
+  padding: .7rem .6rem; color: var(--ink);
+  font-weight: 700; font-size: clamp(.95rem, 2.4vw, 1.1rem); line-height: 1.2;
+}
+.claim-verdict {
+  flex: none; display: flex; align-items: center;
+  background: var(--red); color: #fff;
+  padding: .7rem clamp(.7rem, 2.5vw, 1.1rem);
+  font-weight: 800; text-transform: uppercase; letter-spacing: .02em;
+  font-size: clamp(.72rem, 2vw, .92rem); line-height: 1.12;
+}
+.claims-foot {
+  text-align: center; margin: clamp(1.4rem, 3.5vw, 2rem) auto 0;
+  font-family: var(--font-display); font-weight: 400; text-transform: uppercase;
+  font-size: clamp(1.3rem, 4vw, 2.1rem); color: #fff; letter-spacing: .01em;
+}
+.claims-foot b { color: var(--red); font-weight: 400; }
+.claims-note { text-align: center; margin-top: 1rem; font-size: .95rem; color: #c5cdd6; }
+.claims-note a { color: #ff8074; font-weight: 700; text-decoration: none; }
+.claims-note a:hover { color: #fff; text-decoration: underline; }
+
+/* ============================================================
    Responsive
    ============================================================ */
 @media (max-width: 860px) {
