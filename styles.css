@@ -1228,6 +1228,14 @@ body.lightbox-open .site-header, body.modal-open .site-header { visibility: hidd
 .doc-next h2 { margin-top: 0; }
 .doc-next p { margin-bottom: .6rem; }
 .doc-next p:last-child { margin-bottom: 0; }
+.doc-quote {
+  margin: 1.5rem 0; padding: .3rem 0 .3rem 1.25rem;
+  border-left: 3px solid var(--red);
+  font-family: var(--font-quote); font-size: 1.1rem; line-height: 1.6; color: var(--ink);
+}
+.doc-quote p { margin-bottom: .8rem; }
+.doc-quote p:last-child { margin-bottom: 0; }
+.doc-quote cite { display: block; margin-top: .7rem; font: 600 .9rem/1.4 var(--font-body); font-style: normal; color: var(--muted); }
 
 /* News & press index */
 .news-list { list-style: none; padding: 0; margin: clamp(1.2rem, 3vw, 1.8rem) 0 0; }
